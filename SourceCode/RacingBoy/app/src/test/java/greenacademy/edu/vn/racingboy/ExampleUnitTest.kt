@@ -1,4 +1,4 @@
-package com.example.racingboy
+package greenacademy.edu.vn.racingboy
 
 import org.junit.Test
 
