@@ -7,6 +7,11 @@ import greenacademy.edu.vn.racingboy.R
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_wellcome)
+        setContentView(R.layout.activity_main)
+
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragment, LoginMenuFragment())
+            commit()
+        }
     }
 }

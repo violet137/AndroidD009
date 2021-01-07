@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">RacingBoy</string>
+    <string name="app_name">RACING BOY</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="sign_in_text">\t\t\tSIGN IN \n TO CONTINUE</string>
+
 </resources>

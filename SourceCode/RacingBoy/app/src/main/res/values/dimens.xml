@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="width_image_login">100dp</dimen>
+    <dimen name="height_image_login">100dp</dimen>
+
+    <dimen name="margin_top_image_login">80dp</dimen>
+
+</resources>
