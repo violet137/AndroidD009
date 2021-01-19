@@ -1,0 +1,6 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="HomeImageIconBackground">
+        <item name="android:layout_width">@dimen/home_icon_backgrond_size</item>
+        <item name="android:layout_height">@dimen/home_icon_backgrond_size</item>
+    </style>
+</resources>

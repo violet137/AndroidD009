@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/imgHomeNotification"
+        style="@style/HomeImageIconBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/padding_corner"
+        android:layout_marginTop="@dimen/padding_corner"
+        android:background="@drawable/circle_background_yellow"/>
+    
+    <ImageView
+        android:id="@+id/imgHomeGift"
+        style="@style/HomeImageIconBackground"
+        app:layout_constraintStart_toStartOf="@id/imgHomeNotification"
+        app:layout_constraintTop_toBottomOf="@id/imgHomeNotification"
+        android:layout_marginTop="@dimen/padding_corner"
+        android:background="@drawable/circle_background_yellow"/>
+
+    <ImageView
+        android:id="@+id/imgHomeShop"
+        style="@style/HomeImageIconBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="@dimen/padding_corner"
+        android:layout_marginTop="@dimen/padding_corner"
+        android:background="@drawable/circle_background_yellow"/>
+
+    <ImageView
+        android:id="@+id/imgHomeReward"
+        style="@style/HomeImageIconBackground"
+        app:layout_constraintEnd_toEndOf="@id/imgHomeShop"
+        app:layout_constraintTop_toBottomOf="@id/imgHomeShop"
+        android:layout_marginTop="@dimen/padding_corner"
+        android:background="@drawable/circle_background_yellow"/>
+
+    <ImageView
+        android:id="@+id/imgHomeSetting"
+        style="@style/HomeImageIconBackground"
+        app:layout_constraintStart_toStartOf="@id/imgHomeGift"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/padding_corner"
+        android:background="@drawable/circle_background_yellow"/>
+
+    <ImageView
+        android:id="@+id/imgHomeLeaderboard"
+        style="@style/HomeImageIconBackground"
+        app:layout_constraintEnd_toEndOf="@id/imgHomeReward"
+        app:layout_constraintBottom_toBottomOf="@id/imgHomeSetting"
+        android:background="@drawable/circle_background_yellow"/>
+
+    <TextView
+        android:id="@+id/tvPetrol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/imgHomeNotification"
+        app:layout_constraintTop_toTopOf="@id/imgHomeNotification"
+        app:layout_constraintBottom_toBottomOf="@id/imgHomeNotification"
+        android:layout_marginHorizontal="@dimen/padding_corner"
+        android:text="Petrol"
+        android:textColor="@color/black"
+        android:textSize="@dimen/petrol_text_size"/>
+
+    
+
+    <TextView
+        android:id="@+id/tvCoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/imgHomeNotification"
+        app:layout_constraintTop_toTopOf="@id/imgHomeNotification"
+        app:layout_constraintBottom_toBottomOf="@id/imgHomeNotification"
+        android:layout_marginHorizontal="@dimen/padding_corner"
+        android:text="Petrol"
+        android:textColor="@color/black"
+        android:textSize="@dimen/coin_text_size"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
