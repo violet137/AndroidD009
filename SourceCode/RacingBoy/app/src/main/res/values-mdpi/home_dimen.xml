@@ -13,4 +13,6 @@
     <dimen name="coin_text_size">20sp</dimen>
     <dimen name="coin_size">40dp</dimen>
 
+    <dimen name="petrol_radius">20dp</dimen>
+
 </resources>
