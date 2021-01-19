@@ -16,6 +16,7 @@ class LoginMenuFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.activity_wellcome, container, false)
         val loginBtn = view.findViewById<Button>(R.id.btnToLogin)
+
         loginBtn.setOnClickListener {
             activity?.supportFragmentManager?.beginTransaction()?.let {
                 it.add(R.id.fragment, LoginFragment(activity!!))
