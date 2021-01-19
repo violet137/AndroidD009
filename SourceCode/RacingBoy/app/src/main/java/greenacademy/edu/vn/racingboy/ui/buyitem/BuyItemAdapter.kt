@@ -21,14 +21,14 @@ import greenacademy.edu.vn.racingboy.model.Item
 import kotlin.coroutines.coroutineContext
 import androidx.appcompat.view.menu.ActionMenuItemView.PopupCallback as PopupCallback1
 
-class BuyItemAdapter(val datas:ArrayList<Item>,val activity: Activity):RecyclerView.Adapter<BuyItemHolder>() {
+class BuyItemAdapter(val datas: ArrayList<Item>) : RecyclerView.Adapter<BuyItemHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BuyItemHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.buy_item,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.buy_item, parent, false)
         return BuyItemHolder(view)
     }
 
     override fun onBindViewHolder(holder: BuyItemHolder, position: Int) {
-       val item = datas[position]
+        val item = datas[position]
         Picasso
             .get()
             .load(item.image)
@@ -38,16 +38,17 @@ class BuyItemAdapter(val datas:ArrayList<Item>,val activity: Activity):RecyclerV
         holder.image.setOnClickListener {
 
 
-    }}
+        }
+    }
+
     override fun getItemCount(): Int {
-       return datas.size
+        return datas.size
     }
 
 }
 
 
-
-class BuyItemHolder(view:View):RecyclerView.ViewHolder(view){
+class BuyItemHolder(view: View) : RecyclerView.ViewHolder(view) {
     val image = view.findViewById<ImageView>(R.id.imvItem)
     val price = view.findViewById<TextView>(R.id.tvItemPrice)
     val name = view.findViewById<TextView>(R.id.tvItemName)
