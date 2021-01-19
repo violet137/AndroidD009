@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
 
+    <ImageView
+        android:id="@+id/imvItem"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="price"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/imvItem"
+        app:layout_constraintStart_toStartOf="@id/imvItem"
+        app:layout_constraintEnd_toEndOf="@id/imvItem"
+        />
+
+    <TextView
+        android:id="@+id/tvItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tvItemPrice"
+        app:layout_constraintStart_toStartOf="@id/tvItemPrice"
+        app:layout_constraintEnd_toEndOf="@id/tvItemPrice"
+        />
+
+    <Button
+        android:id="@+id/btnBuyItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="BUY"
+        app:layout_constraintTop_toBottomOf="@id/tvItemName"
+        app:layout_constraintStart_toStartOf="@id/imvItem"
+        app:layout_constraintEnd_toEndOf="@id/imvItem"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
