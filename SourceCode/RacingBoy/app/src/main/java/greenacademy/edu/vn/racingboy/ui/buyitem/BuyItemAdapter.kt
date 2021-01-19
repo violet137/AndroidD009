@@ -18,10 +18,15 @@ import com.squareup.picasso.Picasso
 import com.squareup.picasso.PicassoProvider
 import greenacademy.edu.vn.racingboy.R
 import greenacademy.edu.vn.racingboy.model.Item
+import greenacademy.edu.vn.racingboy.ui.buyitem.detail.DetailItemDialogFragement
 import kotlin.coroutines.coroutineContext
 import androidx.appcompat.view.menu.ActionMenuItemView.PopupCallback as PopupCallback1
 
-class BuyItemAdapter(val datas: ArrayList<Item>) : RecyclerView.Adapter<BuyItemHolder>() {
+class BuyItemAdapter(
+    val datas: ArrayList<Item>,
+    val itemCallback: ((Item) -> Unit)? = null,
+    val buyCallback: ((Item) -> Unit)? = null
+) : RecyclerView.Adapter<BuyItemHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BuyItemHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.buy_item, parent, false)
         return BuyItemHolder(view)
@@ -35,9 +40,11 @@ class BuyItemAdapter(val datas: ArrayList<Item>) : RecyclerView.Adapter<BuyItemH
             .into(holder.image)
         holder.price.text = item.price.toString()
         holder.name.text = item.name
-        holder.image.setOnClickListener {
-
-
+        holder.itemView.setOnClickListener {
+            itemCallback?.invoke(item)
+        }
+        holder.btnBuy.setOnClickListener {
+            buyCallback?.invoke(item)
         }
     }
 

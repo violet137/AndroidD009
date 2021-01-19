@@ -6,10 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import greenacademy.edu.vn.racingboy.R
 import greenacademy.edu.vn.racingboy.model.Item
+import greenacademy.edu.vn.racingboy.ui.buyitem.detail.DetailItemDialogFragement
 import retrofit2.Call
 import retrofit2.Response
 
@@ -43,7 +45,19 @@ class BuyItemFragment() : Fragment() {
                     // chứa data server trả về
                     datas = it as ArrayList<Item>
                     Log.d("testitem", "${datas.size}")
-                    adapter = BuyItemAdapter(datas)
+                    adapter = BuyItemAdapter(datas,
+                        itemCallback = { data ->
+                            // khi user nhấn vào item
+                            fragmentManager?.let { it1 ->
+                                DetailItemDialogFragement.show(
+                                    it1,
+                                    data
+                                )
+                            }
+                        }, buyCallback = { data ->
+                            // khi user nhấn vào nút buy
+                            Toast.makeText(context, "mua vat pham", Toast.LENGTH_LONG).show()
+                        })
                     rvItems?.adapter = adapter
                 }
             }
