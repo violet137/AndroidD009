@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import greenacademy.edu.vn.racingboy.R
+import greenacademy.edu.vn.racingboy.ui.home.HomeFragment
 
 class LoginMenuFragment : Fragment() {
 
@@ -20,6 +21,14 @@ class LoginMenuFragment : Fragment() {
         loginBtn.setOnClickListener {
             activity?.supportFragmentManager?.beginTransaction()?.let {
                 it.add(R.id.fragment, LoginFragment(activity!!))
+                it.addToBackStack("LoginMenuFragment")
+                it.commit()
+            }
+        }
+        val registerButton = view.findViewById<Button>(R.id.btnToRegister)
+        registerButton.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()?.let {
+                it.add(R.id.fragment, HomeFragment())
                 it.addToBackStack("LoginMenuFragment")
                 it.commit()
             }
