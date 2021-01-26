@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import com.squareup.picasso.PicassoProvider
+import de.hdodenhof.circleimageview.CircleImageView
 import greenacademy.edu.vn.racingboy.R
 import greenacademy.edu.vn.racingboy.model.Item
 import greenacademy.edu.vn.racingboy.ui.buyitem.detail.DetailItemDialogFragement
@@ -56,7 +57,7 @@ class BuyItemAdapter(
 
 
 class BuyItemHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val image = view.findViewById<ImageView>(R.id.imvItem)
+    val image = view.findViewById<CircleImageView>(R.id.imvItem)
     val price = view.findViewById<TextView>(R.id.tvItemPrice)
     val name = view.findViewById<TextView>(R.id.tvItemName)
     val btnBuy = view.findViewById<Button>(R.id.btnBuyItem)

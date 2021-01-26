@@ -1,12 +1,11 @@
-package greenacademy.edu.vn.racingboy.ui.buyitem
+package greenacademy.edu.vn.racingboy.ui.leaderboard
 
 import greenacademy.edu.vn.racingboy.model.Item
 import greenacademy.edu.vn.racingboy.ui.leaderboard.model.LeaderBoardUser
 import retrofit2.Call
 import retrofit2.http.GET
 
-interface ApiService {
-    @GET("item")
-    fun listItems(): Call<List<Item>>
+interface ApiUser {
+    @GET("LeaderBoardUser")
+    fun listUser(): Call<List<LeaderBoardUser>>
 }
-

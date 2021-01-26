@@ -67,7 +67,5 @@ class BuyItemFragment() : Fragment() {
                 Log.d("onFailure", "onFailure")
             }
         })
-
     }
-
 }
