@@ -3,4 +3,10 @@
         <item name="android:layout_width">@dimen/home_icon_backgrond_size</item>
         <item name="android:layout_height">@dimen/home_icon_backgrond_size</item>
     </style>
+
+    <style name="SmokeCarLine">
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="background">@drawable/smoke_car</item>
+    </style>
 </resources>

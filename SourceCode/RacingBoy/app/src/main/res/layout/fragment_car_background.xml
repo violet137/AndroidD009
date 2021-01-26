@@ -8,13 +8,23 @@
     tools:context=".ui.home.CarBackgroundFragment">
 
     <ImageView
-        android:id="@+id/background_first_car"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
-        android:background="@drawable/bg_car_style_1"
+        android:id="@+id/smoke_car_1_first_car"
+        android:layout_width="15dp"
+        android:layout_height="50dp"
+        android:background="@drawable/smoke_car"
+        android:layout_marginLeft="20dp"
         app:layout_constraintStart_toStartOf="@id/img_first_car"
+        app:layout_constraintTop_toBottomOf="@id/img_first_car"
+        app:layout_constraintBottom_toBottomOf="@id/img_first_car"/>
+
+    <ImageView
+        android:id="@+id/smoke_car_2_first_car"
+        android:layout_width="15dp"
+        android:layout_height="50dp"
+        android:background="@drawable/smoke_car"
+        android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="@id/img_first_car"
-        app:layout_constraintTop_toTopOf="@id/img_first_car"
+        app:layout_constraintTop_toBottomOf="@id/img_first_car"
         app:layout_constraintBottom_toBottomOf="@id/img_first_car"/>
 
     <ImageView
@@ -31,13 +41,23 @@
         tools:src="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/background_second_car"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
-        android:background="@drawable/bg_car_style_1"
+        android:id="@+id/smoke_car_1_second_car"
+        android:layout_width="15dp"
+        android:layout_height="50dp"
+        android:background="@drawable/smoke_car"
+        android:layout_marginLeft="20dp"
         app:layout_constraintStart_toStartOf="@id/img_second_car"
+        app:layout_constraintTop_toBottomOf="@id/img_second_car"
+        app:layout_constraintBottom_toBottomOf="@id/img_second_car"/>
+
+    <ImageView
+        android:id="@+id/smoke_car_2_second_car"
+        android:layout_width="15dp"
+        android:layout_height="50dp"
+        android:background="@drawable/smoke_car"
+        android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="@id/img_second_car"
-        app:layout_constraintTop_toTopOf="@id/img_second_car"
+        app:layout_constraintTop_toBottomOf="@id/img_second_car"
         app:layout_constraintBottom_toBottomOf="@id/img_second_car"/>
 
     <ImageView
@@ -53,13 +73,23 @@
         tools:src="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/background_third_car"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
-        android:background="@drawable/bg_car_style_1"
+        android:id="@+id/smoke_car_2_third_car"
+        android:layout_width="15dp"
+        android:layout_height="50dp"
+        android:background="@drawable/smoke_car"
+        android:layout_marginLeft="20dp"
         app:layout_constraintStart_toStartOf="@id/img_third_car"
+        app:layout_constraintTop_toBottomOf="@id/img_third_car"
+        app:layout_constraintBottom_toBottomOf="@id/img_third_car"/>
+
+    <ImageView
+        android:id="@+id/smoke_car_third_car"
+        android:layout_width="15dp"
+        android:layout_height="50dp"
+        android:background="@drawable/smoke_car"
+        android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="@id/img_third_car"
-        app:layout_constraintTop_toTopOf="@id/img_third_car"
+        app:layout_constraintTop_toBottomOf="@id/img_third_car"
         app:layout_constraintBottom_toBottomOf="@id/img_third_car"/>
 
     <ImageView

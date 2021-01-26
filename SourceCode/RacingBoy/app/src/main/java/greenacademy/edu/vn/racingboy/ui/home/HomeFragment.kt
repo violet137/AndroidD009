@@ -1,5 +1,6 @@
 package greenacademy.edu.vn.racingboy.ui.home
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -21,6 +22,7 @@ class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private var mediaPlayer: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +39,16 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         fragmentManager?.beginTransaction()?.replace(R.id.mainframe, CarBackgroundFragment())?.commit()
+        mediaPlayer = MediaPlayer.create(context, R.raw.background_music)
+
+        mediaPlayer?.start()
         return view
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer?.stop()
+        mediaPlayer?.release()
     }
 
     companion object {

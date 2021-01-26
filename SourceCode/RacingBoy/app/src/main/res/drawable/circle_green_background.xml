@@ -13,13 +13,13 @@
                 </shape>
             </item>
             <item
-                android:bottom="50dp"
-                android:top="50dp"
-                android:right="50dp"
-                android:left="50dp"
+                android:bottom="@dimen/home_icon_padding"
+                android:top="@dimen/home_icon_padding"
+                android:right="@dimen/home_icon_padding"
+                android:left="@dimen/home_icon_padding"
                 android:gravity="center"
-                android:width="50dp"
-                android:height="50dp"
+                android:width="@dimen/home_icon_size"
+                android:height="@dimen/home_icon_size"
                 android:drawable="@drawable/ic_telephone" >
             </item>
         </layer-list>
