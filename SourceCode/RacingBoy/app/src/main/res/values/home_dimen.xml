@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="home_icon_backgrond_size">50dp</dimen>
+    <dimen name="home_icon_backgrond_size">80dp</dimen>
     <dimen name="home_icon_stroke_width">2dp</dimen>
     <dimen name="home_icon_size">35dp</dimen>
 
@@ -17,7 +17,7 @@
 
     <dimen name="home_icon_padding">40dp</dimen>
     <dimen name="notification_background_size">20dp</dimen>
-    <dimen name="margin_notification">25dp</dimen>
+    <dimen name="margin_notification">20dp</dimen>
 
     <dimen name="margin_button_icon">20dp</dimen>
     <dimen name="margin_vertical_button_icon">10dp</dimen>
