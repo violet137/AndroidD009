@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgHomeNotification"
+        style="@style/HomeImageIconBackground"
+        android:layout_marginLeft="@dimen/padding_corner"
+        android:layout_marginTop="@dimen/padding_corner"
+        android:background="@drawable/circle_background_yellow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgNotificationNumber"
+        android:layout_width="@dimen/notification_background_size"
+        android:layout_height="@dimen/notification_background_size"
+        android:background="@drawable/notification_circle_background"
+        app:layout_constraintEnd_toEndOf="@+id/imgHomeNotification"
+        app:layout_constraintTop_toTopOf="@+id/imgHomeNotification" />
+
+    <ImageView
+        android:id="@+id/imgHomeGift"
+        style="@style/HomeImageIconBackground"
+        android:layout_marginTop="@dimen/padding_corner"
+        android:background="@drawable/circle_purple_background"
+        app:layout_constraintStart_toStartOf="@id/imgHomeNotification"
+        app:layout_constraintTop_toBottomOf="@id/imgHomeNotification" />
+
+    <ImageView
+        android:id="@+id/imgHomeShop"
+        style="@style/HomeImageIconBackground"
+        android:layout_marginTop="@dimen/padding_corner"
+        android:layout_marginRight="@dimen/padding_corner"
+        android:background="@drawable/circle_red_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgHomeReward"
+        style="@style/HomeImageIconBackground"
+        android:layout_marginTop="@dimen/padding_corner"
+        android:background="@drawable/circle_green_background"
+        app:layout_constraintEnd_toEndOf="@id/imgHomeShop"
+        app:layout_constraintTop_toBottomOf="@id/imgHomeShop" />
+
+    <ImageView
+        android:id="@+id/imgHomeSetting"
+        style="@style/HomeImageIconBackground"
+        android:layout_marginBottom="@dimen/padding_corner"
+        android:background="@drawable/circle_purple_slight_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/imgHomeGift" />
+
+    <ImageView
+        android:id="@+id/imgHomeLeaderboard"
+        style="@style/HomeImageIconBackground"
+        android:background="@drawable/circle_green_bold_background"
+        app:layout_constraintBottom_toBottomOf="@id/imgHomeSetting"
+        app:layout_constraintEnd_toEndOf="@id/imgHomeReward" />
+
+    <TextView
+        android:id="@+id/tvPetrol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/padding_corner"
+        android:text="Petrol"
+        android:theme="@style/HomeMainText"
+        app:layout_constraintBottom_toBottomOf="@id/imgHomeNotification"
+        app:layout_constraintStart_toEndOf="@id/imgHomeNotification"
+        app:layout_constraintTop_toTopOf="@id/imgHomeNotification" />
+
+    <ImageView
+        android:id="@+id/background_petrol"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/padding_corner"
+        android:background="@drawable/petrol_background"
+        app:layout_constraintBottom_toBottomOf="@id/tvPetrol"
+        app:layout_constraintEnd_toStartOf="@id/imgHomeShop"
+        app:layout_constraintStart_toEndOf="@id/tvPetrol"
+        app:layout_constraintTop_toTopOf="@id/tvPetrol" />
+
+    <TextView
+        android:id="@+id/tvCoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/padding_corner"
+        android:layout_marginVertical="@dimen/padding_corner"
+        android:text="120"
+        android:theme="@style/HomeMainText"
+        app:layout_constraintEnd_toStartOf="@id/coin_image_view"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/tvPetrol"
+        app:layout_constraintTop_toBottomOf="@id/tvPetrol" />
+
+    <ImageView
+        android:id="@+id/coin_image_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="@dimen/padding_corner"
+        android:background="@drawable/circle_background_yellow"
+        android:padding="@dimen/padding_corner"
+        app:layout_constraintBottom_toBottomOf="@id/tvCoin"
+        app:layout_constraintEnd_toEndOf="@id/background_petrol"
+        app:layout_constraintStart_toEndOf="@id/tvCoin"
+        app:layout_constraintTop_toTopOf="@id/tvCoin" />
+
+    <Button
+        android:id="@+id/btnRandomPlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/margin_button_icon"
+        android:layout_marginVertical="@dimen/margin_vertical_button_icon"
+        app:layout_constraintBottom_toBottomOf="@id/imgHomeSetting"
+        app:layout_constraintEnd_toStartOf="@id/imgHomeLeaderboard"
+        app:layout_constraintStart_toEndOf="@id/imgHomeSetting"
+        app:layout_constraintTop_toTopOf="@id/imgHomeSetting" />
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/play_button_height"
+        android:layout_marginVertical="@dimen/margin_vertical_button_icon"
+        app:layout_constraintBottom_toTopOf="@id/btnRandomPlay"
+        app:layout_constraintEnd_toStartOf="@id/imgHomeLeaderboard"
+        app:layout_constraintStart_toEndOf="@id/imgHomeSetting" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/play_button_height"
+        app:layout_constraintBottom_toTopOf="@id/btnPlay"
+        app:layout_constraintEnd_toEndOf="@id/btnRandomPlay"
+        app:layout_constraintStart_toStartOf="@id/btnRandomPlay">
+
+        <Button
+            android:id="@+id/btnInvitation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_marginVertical="@dimen/margin_vertical_button_icon"
+            android:background="@color/home_primary_color" />
+
+        <ImageView
+            android:id="@+id/tvNumberInvitation"
+            android:layout_width="@dimen/notification_background_size"
+            android:layout_height="@dimen/notification_background_size"
+            android:layout_gravity="top|right"
+            android:background="@drawable/notification_circle_background"
+            android:elevation="6dp" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
