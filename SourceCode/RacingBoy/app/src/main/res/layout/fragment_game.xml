@@ -18,7 +18,7 @@
         android:id="@+id/imvA"
         android:layout_width="40dp"
         android:layout_height="70dp"
-        app:srcCompat="@drawable/car_type_a"
+        app:srcCompat="@drawable/car_type_e_1"
         tools:layout_editor_absoluteX="147dp"
         tools:layout_editor_absoluteY="645dp" />
 
