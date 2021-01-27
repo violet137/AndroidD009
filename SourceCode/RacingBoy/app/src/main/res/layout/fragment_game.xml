@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/map_a">
+
+    <ImageView
+        android:id="@+id/imvB"
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/car_a"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="645dp" />
+
+    <ImageView
+        android:id="@+id/imvA"
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/car_type_a"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="645dp" />
+
+    <Button
+        android:id="@+id/btnLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trái"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phải"
+        app:layout_constraintStart_toStartOf="@+id/btnLeft"
+        app:layout_constraintTop_toBottomOf="@+id/btnLeft" />
+</androidx.constraintlayout.widget.ConstraintLayout>

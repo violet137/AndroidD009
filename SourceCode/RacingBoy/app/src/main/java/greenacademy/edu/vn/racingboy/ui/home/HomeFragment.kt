@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import greenacademy.edu.vn.racingboy.R
+import greenacademy.edu.vn.racingboy.ui.game.GameFragment
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -42,6 +44,13 @@ class HomeFragment : Fragment() {
         mediaPlayer = MediaPlayer.create(context, R.raw.background_music)
 
         mediaPlayer?.start()
+        val btnPlay = view.findViewById<Button>(R.id.btnPlay)
+        btnPlay.setOnClickListener {
+            fragmentManager?.beginTransaction()?.apply {
+                replace(R.id.fragment, GameFragment())
+                commit()
+            }
+        }
         return view
     }
 
