@@ -48,6 +48,7 @@ class HomeFragment : Fragment() {
         btnPlay.setOnClickListener {
             fragmentManager?.beginTransaction()?.apply {
                 replace(R.id.fragment, GameFragment())
+                addToBackStack("")
                 commit()
             }
         }
