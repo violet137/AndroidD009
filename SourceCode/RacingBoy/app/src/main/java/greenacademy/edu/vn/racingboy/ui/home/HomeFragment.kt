@@ -6,10 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import greenacademy.edu.vn.racingboy.R
-import greenacademy.edu.vn.racingboy.ui.game.GameFragment
 import greenacademy.edu.vn.racingboy.ui.buyitem.BuyItemFragment
 import greenacademy.edu.vn.racingboy.ui.leaderboard.LeaderBoardFragment
 
@@ -46,13 +44,6 @@ class HomeFragment : Fragment() {
         fragmentManager?.beginTransaction()?.replace(R.id.mainframe, CarBackgroundFragment())?.commit()
         mediaPlayer = MediaPlayer.create(context, R.raw.background_music)
         mediaPlayer?.start()
-        val btnPlay = view.findViewById<Button>(R.id.btnPlay)
-        btnPlay.setOnClickListener {
-            fragmentManager?.beginTransaction()?.apply {
-                replace(R.id.fragment, GameFragment())
-                commit()
-            }
-        }
 
 
         val leaderBoardButton = view.findViewById<ImageView>(R.id.imgHomeLeaderboard)
