@@ -1,5 +1,7 @@
 package greenacademy.edu.vn.racingboy.ui.buyitem
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -47,9 +49,13 @@ val imvBack = view.findViewById<ImageView>(R.id.imvStoreBack)
             manager?.popBackStack()
         }
         view.findViewById<ImageView>(R.id.imageView2).setOnClickListener {
-       val mf=   activity?.supportFragmentManager?.beginTransaction()?.add(R.id.fragment,MapsFragment())
-            mf?.addToBackStack("LoginMenuFragment")
-            mf?.commit()
+//       val mf=   activity?.supportFragmentManager?.beginTransaction()?.add(R.id.fragment,MapsFragment())
+//            mf?.addToBackStack("LoginMenuFragment")
+//            mf?.commit()
+            val gmmIntentUri = Uri.parse("geo:37.7749,-122.4194")
+            val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+            mapIntent.setPackage("com.google.android.apps.maps")
+            startActivity(mapIntent)
         }
 
     }
