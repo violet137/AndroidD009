@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -16,6 +17,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
 import greenacademy.edu.vn.racingboy.R
 import greenacademy.edu.vn.racingboy.ui.home.HomeFragment
+import greenacademy.edu.vn.racingboy.ui.leaderboard.LeaderBoardFragment
 
 
 class LoginFragment(val activity: Activity) : Fragment() {
@@ -42,6 +44,7 @@ class LoginFragment(val activity: Activity) : Fragment() {
         val account = GoogleSignIn.getLastSignedInAccount(activity)
         val btnSignIn = view.findViewById<Button>(R.id.btnSignInGG)
         val btnLogin = view.findViewById<Button>(R.id.btnLogin)
+
         btnSignIn.setOnClickListener {
             if (account == null) {
                 val signInIntent = mGoogleSignInClient.signInIntent

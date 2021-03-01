@@ -1,27 +1,14 @@
 package greenacademy.edu.vn.racingboy.ui.buyitem
 
-import android.app.Activity
-import android.app.Dialog
-import android.app.Service
-import android.icu.number.NumberFormatter.with
-import android.icu.number.NumberRangeFormatter.with
-import android.text.Layout
-import android.view.InflateException
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
-import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
-import com.squareup.picasso.PicassoProvider
 import de.hdodenhof.circleimageview.CircleImageView
 import greenacademy.edu.vn.racingboy.R
 import greenacademy.edu.vn.racingboy.model.Item
-import greenacademy.edu.vn.racingboy.ui.buyitem.detail.DetailItemDialogFragement
-import kotlin.coroutines.coroutineContext
-import androidx.appcompat.view.menu.ActionMenuItemView.PopupCallback as PopupCallback1
 
 class BuyItemAdapter(
     val datas: ArrayList<Item>,

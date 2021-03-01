@@ -7,8 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import greenacademy.edu.vn.racingboy.R
 import greenacademy.edu.vn.racingboy.ui.game.GameFragment
+import greenacademy.edu.vn.racingboy.ui.buyitem.BuyItemFragment
+import greenacademy.edu.vn.racingboy.ui.leaderboard.LeaderBoardFragment
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -42,13 +45,31 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         fragmentManager?.beginTransaction()?.replace(R.id.mainframe, CarBackgroundFragment())?.commit()
         mediaPlayer = MediaPlayer.create(context, R.raw.background_music)
-
         mediaPlayer?.start()
         val btnPlay = view.findViewById<Button>(R.id.btnPlay)
         btnPlay.setOnClickListener {
             fragmentManager?.beginTransaction()?.apply {
                 replace(R.id.fragment, GameFragment())
                 addToBackStack("")
+                commit()
+            }
+        }
+
+
+        val leaderBoardButton = view.findViewById<ImageView>(R.id.imgHomeLeaderboard)
+        leaderBoardButton.setOnClickListener {
+            fragmentManager?.beginTransaction()?.let {
+                it.add(R.id.fragment, LeaderBoardFragment())
+                it.addToBackStack("LoginMenuFragment")
+                it.commit()
+            }
+        }
+
+        val shop = view.findViewById<ImageView>(R.id.imgHomeShop)
+        shop.setOnClickListener {
+            fragmentManager?.beginTransaction()?.apply {
+                add(R.id.fragment,BuyItemFragment())
+                addToBackStack("LoginMenuFragment")
                 commit()
             }
         }

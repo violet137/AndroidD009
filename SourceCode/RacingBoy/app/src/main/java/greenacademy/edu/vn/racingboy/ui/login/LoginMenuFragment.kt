@@ -1,13 +1,16 @@
 package greenacademy.edu.vn.racingboy.ui.login
 
+import android.media.Image
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import greenacademy.edu.vn.racingboy.R
 import greenacademy.edu.vn.racingboy.ui.home.HomeFragment
+import greenacademy.edu.vn.racingboy.ui.leaderboard.LeaderBoardFragment
 
 class LoginMenuFragment : Fragment() {
 
@@ -33,6 +36,7 @@ class LoginMenuFragment : Fragment() {
                 it.commit()
             }
         }
+
         return view
     }
 }
