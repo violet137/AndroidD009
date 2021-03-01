@@ -1,17 +1,22 @@
 package greenacademy.edu.vn.racingboy.ui.buyitem
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.gms.maps.SupportMapFragment
 import greenacademy.edu.vn.racingboy.R
 import greenacademy.edu.vn.racingboy.model.Item
-import greenacademy.edu.vn.racingboy.ui.buyitem.detail.DetailItemDialogFragement
+import greenacademy.edu.vn.racingboy.ui.MapsFragment
+import greenacademy.edu.vn.racingboy.ui.buyitem.detail.DetailItemDialogFragment
 import retrofit2.Call
 import retrofit2.Response
 
@@ -26,6 +31,7 @@ class BuyItemFragment() : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         return inflater.inflate(R.layout.fragment_buy_item, container, false)
     }
 
@@ -36,6 +42,22 @@ class BuyItemFragment() : Fragment() {
             GridLayoutManager(context, 2)
         // goi lấy data từ server
         callItemApi()
+val imvBack = view.findViewById<ImageView>(R.id.imvStoreBack)
+        imvBack.setOnClickListener {
+            val manager = activity?.supportFragmentManager
+           manager?.beginTransaction()?.remove(this)?.commit()
+            manager?.popBackStack()
+        }
+        view.findViewById<ImageView>(R.id.imageView2).setOnClickListener {
+//       val mf=   activity?.supportFragmentManager?.beginTransaction()?.add(R.id.fragment,MapsFragment())
+//            mf?.addToBackStack("LoginMenuFragment")
+//            mf?.commit()
+            val gmmIntentUri = Uri.parse("geo:37.7749,-122.4194")
+            val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+            mapIntent.setPackage("com.google.android.apps.maps")
+            startActivity(mapIntent)
+        }
+
     }
 
     fun callItemApi() {
@@ -49,7 +71,7 @@ class BuyItemFragment() : Fragment() {
                         itemCallback = { data ->
                             // khi user nhấn vào item
                             fragmentManager?.let { it1 ->
-                                DetailItemDialogFragement.show(
+                                DetailItemDialogFragment.show(
                                     it1,
                                     data
                                 )

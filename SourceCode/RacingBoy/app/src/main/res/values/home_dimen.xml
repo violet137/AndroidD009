@@ -23,4 +23,12 @@
     <dimen name="margin_vertical_button_icon">10dp</dimen>
 
     <dimen name="play_button_height">70dp</dimen>
+
+    <dimen name="height_bg_leader_board_item">90dp</dimen>
+    <dimen name="padding_leader_board_item">12dp</dimen>
+    <dimen name="height_leader_board_button_invfriend">40dp</dimen>
+    <dimen name="width_leader_board_button_invfriend">200dp</dimen>
+    <dimen name="height_width_leader_board_avatar">60dp</dimen>
+    <dimen name="margin_top_start_leader_board_avatar">12dp</dimen>
+    <dimen name="margin_12dp_leader_board">12dp</dimen>
 </resources>

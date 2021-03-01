@@ -9,7 +9,7 @@
         style="@style/HomeImageIconBackground"
         android:layout_marginLeft="@dimen/padding_corner"
         android:layout_marginTop="@dimen/padding_corner"
-        android:background="@drawable/circle_background_yellow"
+        android:background="@drawable/ic_shop_d"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,7 +25,7 @@
         android:id="@+id/imgHomeGift"
         style="@style/HomeImageIconBackground"
         android:layout_marginTop="@dimen/padding_corner"
-        android:background="@drawable/circle_purple_background"
+        android:background="@drawable/ic_shop_a"
         app:layout_constraintStart_toStartOf="@id/imgHomeNotification"
         app:layout_constraintTop_toBottomOf="@id/imgHomeNotification" />
 
@@ -34,7 +34,7 @@
         style="@style/HomeImageIconBackground"
         android:layout_marginTop="@dimen/padding_corner"
         android:layout_marginRight="@dimen/padding_corner"
-        android:background="@drawable/circle_red_background"
+        android:background="@drawable/ic_shop_c"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,7 +42,7 @@
         android:id="@+id/imgHomeReward"
         style="@style/HomeImageIconBackground"
         android:layout_marginTop="@dimen/padding_corner"
-        android:background="@drawable/circle_green_background"
+        android:background="@drawable/ic_shop_b"
         app:layout_constraintEnd_toEndOf="@id/imgHomeShop"
         app:layout_constraintTop_toBottomOf="@id/imgHomeShop" />
 
@@ -50,14 +50,14 @@
         android:id="@+id/imgHomeSetting"
         style="@style/HomeImageIconBackground"
         android:layout_marginBottom="@dimen/padding_corner"
-        android:background="@drawable/circle_purple_slight_background"
+        android:background="@drawable/ic_setting"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/imgHomeGift" />
 
     <ImageView
         android:id="@+id/imgHomeLeaderboard"
         style="@style/HomeImageIconBackground"
-        android:background="@drawable/circle_green_bold_background"
+        android:background="@drawable/ic_leaderboard"
         app:layout_constraintBottom_toBottomOf="@id/imgHomeSetting"
         app:layout_constraintEnd_toEndOf="@id/imgHomeReward" />
 
@@ -101,7 +101,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginHorizontal="@dimen/padding_corner"
-        android:background="@drawable/circle_background_yellow"
+        android:background="@drawable/ic_money_menu"
         android:padding="@dimen/padding_corner"
         app:layout_constraintBottom_toBottomOf="@id/tvCoin"
         app:layout_constraintEnd_toEndOf="@id/background_petrol"
